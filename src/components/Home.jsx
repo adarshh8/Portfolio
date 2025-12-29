@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import Image from '../assets/prof2.jpeg'
 import { FaInstagram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
@@ -98,7 +97,7 @@ function Home() {
             </button>
           </div>
           <div className='ml-[1150px] -mt-[260px]'>
-            <img src={Image} alt='profile' className='w-64 h-64 rounded-full object-cover' />
+            <img src='/assets/prof1.jpeg' alt='profile' className='w-64 h-64 rounded-full object-cover' />
 
           </div>
         </div>

@@ -1,6 +1,4 @@
 import React, { useMemo, useState } from "react";
-import Project from '../assets/proj2.png'
-import Project1 from '../assets/proj3.png'
 import {
   FaUserGraduate,
   FaBriefcase,
@@ -331,7 +329,7 @@ function Projects() {
       <div className="flex gap-14">
         <div className="">
             <p className="font-serif">Currency Convertor</p>
-            <img src={Project} alt="project" className="rounded-lg w-40 h-40" />
+            <img src='/assets/proj2.png' alt="project" className="rounded-lg w-40 h-40" />
             <div className="flex gap-[74px] mt-2 rounded-full shadow shadow-xl shadow-red-300">
                 <button 
                   className="text-white font-serif bg-[#2F4156] rounded-full px-1 hover:bg-[#1a2a3a] transition-colors cursor-pointer"
@@ -353,7 +351,7 @@ function Projects() {
         </div>
         <div className="">
             <p className="font-serif">Password Generator</p>
-            <img src={Project1} alt="project" className="rounded-lg w-40 h-40" />
+            <img src='/assets/proj3.png' alt="project" className="rounded-lg w-40 h-40" />
             <div className="flex gap-[74px] mt-2 rounded-full shadow shadow-xl shadow-red-300">
                 <button 
                   className="text-white font-serif bg-[#2F4156] rounded-full px-1 hover:bg-[#1a2a3a] transition-colors cursor-pointer"

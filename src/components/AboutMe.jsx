@@ -1,5 +1,5 @@
 import React from 'react'
-import Image1 from '../assets/prof3.jpeg'
+
 
 function AboutMe() {
   return (
@@ -15,7 +15,7 @@ function AboutMe() {
 
         <div className='flex shadow-2xl shadow max-w-3xl mx-auto mt-8'>
           <div className="w-1/2">
-            <img src={Image1} alt="About" className="w-full h-full object-cover" />
+            <img src='/assets/prof2.jpeg' alt="About" className="w-full h-full object-cover" />
           </div>
 
           <div className="w-1/2 p-6 font-sans">
