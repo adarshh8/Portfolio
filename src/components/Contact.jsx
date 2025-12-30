@@ -23,10 +23,10 @@ function Contact() {
     e.preventDefault();
     // Here you can add your form submission logic (e.g., send to backend)
     console.log('Form submitted:', formData);
-    
+
     // Show success message (you can replace this with a toast notification)
     alert('Thank you for your message! I will get back to you soon.');
-    
+
     // Reset form
     setFormData({
       name: '',
@@ -45,10 +45,10 @@ function Contact() {
         </div>
       </div>
 
-      <div className='flex justify-center mt-8 mb-12'>
-        <div className='w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl flex'>
+      <div className='flex justify-center mt-8 mb-12 px-4'>
+        <div className='w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row'>
           {/* Left Column - Dark Blue Background */}
-          <div className='w-1/2 bg-blue-900 p-8 flex flex-col relative overflow-hidden'>
+          <div className='w-full md:w-1/2 bg-blue-900 p-8 flex flex-col relative overflow-hidden min-h-[300px]'>
             {/* Decorative bubbles background */}
             <div className='absolute inset-0 opacity-20'>
               <div className='grid grid-cols-4 gap-3 p-4'>
@@ -59,11 +59,11 @@ function Contact() {
             </div>
 
             {/* Content */}
-            <div className='relative z-10'>
+            <div className='relative z-10 h-full flex flex-col'>
               <div className='flex items-center gap-2 mb-6'>
-                <h1 className='text-4xl font-bold text-white'>Get In Touch</h1>
+                <h1 className='text-3xl md:text-4xl font-bold text-white'>Get In Touch</h1>
               </div>
-              
+
               <div className='flex gap-4 mb-8'>
                 <a href='https://www.instagram.com/adarshh_010/?next=%2F&hl=en' target='_blank' rel='noopener noreferrer' className='text-white text-2xl hover:opacity-80 transition'>
                   <FaInstagram />
@@ -84,7 +84,7 @@ function Contact() {
           </div>
 
           {/* Right Column - Light Gray Background with Form */}
-          <div className='w-1/2 bg-gray-200 p-8 flex flex-col'>
+          <div className='w-full md:w-1/2 bg-gray-200 p-8 flex flex-col'>
             <form onSubmit={handleSubmit} className='flex flex-col h-full'>
               <div className='mb-6'>
                 <label htmlFor='name' className='block text-gray-700 font-medium mb-2'>

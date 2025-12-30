@@ -10,11 +10,11 @@ function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-[#2F4156]/95 backdrop-blur-md border-b border-gray-500">
-      <div className="flex items-center justify-between px-5 py-5 text-white">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-5 py-4 text-white gap-4 md:gap-0">
 
-        <div className="flex-1">
+        <div className="flex-1 text-center md:text-left">
           <h1
-            className="ml-[350px] text-3xl cursor-pointer select-none"
+            className="text-3xl cursor-pointer select-none"
             onClick={() => scrollToSection("home")}
           >
             <span className="text-[#17A9E5]">POR</span>
@@ -23,7 +23,7 @@ function Header() {
           </h1>
         </div>
 
-        <nav className="flex-1 flex justify-center gap-6 mr-[350px] text-xl">
+        <nav className="flex flex-wrap justify-center gap-6 text-lg md:text-xl">
           <span
             className="cursor-pointer transition-all hover:text-red-400 hover:scale-105"
             onClick={() => scrollToSection("home")}

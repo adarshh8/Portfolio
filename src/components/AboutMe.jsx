@@ -13,12 +13,12 @@ function AboutMe() {
 
 
 
-        <div className='flex shadow-2xl shadow max-w-3xl mx-auto mt-8'>
-          <div className="w-1/2">
-            <img src='/assets/prof2.jpeg' alt="About" className="w-full h-full object-cover" />
+        <div className='flex flex-col md:flex-row shadow-2xl shadow max-w-4xl mx-auto mt-8 mx-4 md:mx-auto bg-white rounded-xl overflow-hidden'>
+          <div className="w-full md:w-1/2">
+            <img src='/assets/prof2.jpeg' alt="About" className="w-full h-64 md:h-full object-cover" />
           </div>
 
-          <div className="w-1/2 p-6 font-sans">
+          <div className="w-full md:w-1/2 p-6 md:p-8 font-sans">
             <p className="text-[14px] leading-[1.7] text-gray-700">
               Full-stack web developer with strong experience in MERN stack
               development. I enjoy building efficient, scalable, and
