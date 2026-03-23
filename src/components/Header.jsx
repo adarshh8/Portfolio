@@ -38,12 +38,6 @@ function Header() {
             About Me
           </span>
 
-          <span
-            className="cursor-pointer transition-all hover:text-red-400 hover:scale-105"
-            onClick={() => scrollToSection("resume")}
-          >
-            Resume
-          </span>
 
           <span
             className="cursor-pointer transition-all hover:text-red-400 hover:scale-105"

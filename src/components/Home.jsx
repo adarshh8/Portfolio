@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaLinkedinIn } from "react-icons/fa6";
 import AboutMe from './AboutMe';
-import Resume from './Resume';
+
 import Contact from './Contact';
 
 function Home() {
@@ -95,21 +95,33 @@ function Home() {
                 >
                   Hire Me
                 </button>
-                <button
-                  className='rounded-xl font-serif text-white bg-orange-500 px-6 py-2 hover:bg-orange-600 transition-colors'
-                  onClick={() => {
-                    window.open('https://drive.google.com/file/d/1grW9APfY2QryfyVcqVJSl6JDmoUdUHB7/view?usp=sharing', '_blank');
-                  }}
+                <a
+                  href="/assets/Adarsh_Dwivedi_Resume.pdf"
+                  download="Adarsh_Dwivedi_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className='rounded-xl font-serif text-white bg-orange-500 px-6 py-2 hover:bg-orange-600 transition-colors inline-flex items-center justify-center'
                 >
                   Get Resume
-                </button>
+                </a>
               </div>
 
             </div>
 
             {/* Right Content - Image */}
-            <div className='md:w-1/2 flex justify-center md:justify-end'>
-              <img src='/assets/prof1.jpeg' alt='profile' className='w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-gray-600 shadow-2xl' />
+            <div className='md:w-1/2 flex justify-center md:justify-end relative mr-0 md:mr-8 lg:mr-16 mt-12 md:mt-0'>
+              
+              {/* Clean, professional circular profile picture */}
+              <div className='relative flex items-center justify-center p-2 rounded-full border border-gray-500/30 bg-white/5 shadow-2xl'>
+                <img 
+                  src='/assets/prof1.jpeg' 
+                  alt='Adarsh Profile' 
+                  className='relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-[6px] border-[#2F4156] shadow-inner transition-transform duration-500 hover:scale-[1.02]'
+                />
+                
+                {/* Subtle outer accent ring */}
+                <div className='absolute inset-0 rounded-full border-2 border-orange-500/20 -m-1 pointer-events-none'></div>
+              </div>
             </div>
 
           </div>
@@ -117,9 +129,7 @@ function Home() {
         <div id="about-me" className='scroll-mt-20'>
           <AboutMe />
         </div>
-        <div id="resume" className='scroll-mt-20'>
-          <Resume />
-        </div>
+
         <div id="contact" className='scroll-mt-20'>
           <Contact />
         </div>

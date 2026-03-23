@@ -5,6 +5,7 @@ import {
   FaCode,
   FaProjectDiagram,
   FaHeart,
+  FaTrophy,
 } from "react-icons/fa";
 
 function Resume() {
@@ -17,6 +18,7 @@ function Resume() {
     { id: "skills", label: "Programming Skills", icon: <FaCode /> },
     { id: "projects", label: "Projects", icon: <FaProjectDiagram /> },
     { id: "interests", label: "Interests", icon: <FaHeart /> },
+    { id: "achievements", label: "Achievements", icon: <FaTrophy /> },
   ];
 
   const activeIndex = useMemo(() => {
@@ -136,6 +138,7 @@ function Resume() {
             {activeSection === "skills" && <Skills />}
             {activeSection === "projects" && <Projects />}
             {activeSection === "interests" && <Interests />}
+            {activeSection === "achievements" && <Achievements />}
           </div>
         </div>
 
@@ -434,6 +437,69 @@ function Interests() {
           </div>
         </li>
       </ul>
+    </>
+  );
+}
+
+function Achievements() {
+  const achievementsList = [
+    {
+      title: "Cloud Computing – NPTEL",
+      desc: "Completed NPTEL certification covering cloud architecture, services, and deployment models.",
+      link: "https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL25CS11S143730199904228082",
+      image: "/assets/nptel.jpg",
+    },
+    {
+      title: "4★ in C++ – HackerRank",
+      desc: "Achieved a 4-star rating in C++ by solving algorithm and data structure problems.",
+      link: "https://www.hackerrank.com/certificates/286d87b01d7e",
+      image: "", // If you have an image for this, add it here (e.g., "/assets/hackerrank.png")
+    },
+    {
+      title: "Responsive Web Design – FreeCodeCamp",
+      desc: "Learned modern HTML, CSS, Flexbox, and responsive layouts.",
+      link: "https://www.freecodecamp.org/certification/adarsh_dwivedi07/responsive-web-design",
+      image: "/assets/freecode.png",
+    },
+    {
+      title: "ChatGPT Prompt Engineering – Infosys",
+      desc: "Completed certification focused on effective AI prompt design and usage.",
+      link: "https://infyspringboard.onwingspan.com/public-assets/infosysheadstart/cert/lex_auth_014157693153288192147/1-e2a7354b-8633-4517-a9b8-b1913840bf22.pdf",
+      image: "/assets/infosys.jpg",
+    },
+  ];
+
+  return (
+    <>
+      <div className="max-h-[250px] overflow-y-auto pr-2">
+        <h2 className="text-xl mb-4">Achievements & Certifications</h2>
+
+        <ul className="mt-4 space-y-6 text-[14px] text-gray-700">
+          {achievementsList.map((item, index) => (
+            <li key={index} className="flex items-start gap-3">
+              <span className="mt-1 w-3 h-3 bg-orange-500 rounded-full flex-shrink-0"></span>
+              <div className="w-full">
+                <p className="text-orange-500">{item.title}</p>
+                <p className="text-gray-600 text-sm mt-1">{item.desc}</p>
+
+                {item.link && (
+                  <div className="mt-2 text-left">
+                    <a href={item.link} target="_blank" rel="noreferrer" className="inline-block mt-1 text-xs text-white bg-orange-500 px-3 py-1 rounded-full shadow hover:bg-orange-600 transition-colors cursor-pointer">
+                      View Certificate
+                    </a>
+                  </div>
+                )}
+
+                {item.image && (
+                  <div className="mt-3">
+                    <img src={item.image} alt={item.title} className="w-32 h-auto md:w-48 rounded-md shadow-sm border border-gray-200 object-cover" />
+                  </div>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 }

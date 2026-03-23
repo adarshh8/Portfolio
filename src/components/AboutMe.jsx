@@ -66,14 +66,15 @@ function AboutMe() {
               >
                 Hire Me
               </button>
-              <button
-                className='rounded-xl font-serif text-white bg-orange-500 px-3 py-1 hover:bg-orange-600 transition-colors'
-                onClick={() => {
-                  window.open('https://drive.google.com/file/d/1grW9APfY2QryfyVcqVJSl6JDmoUdUHB7/view?usp=sharing', '_blank');
-                }}
+              <a
+                href="/assets/Adarsh_Dwivedi_Resume.pdf"
+                download="Adarsh_Dwivedi_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className='rounded-xl font-serif text-white bg-orange-500 px-3 py-1 hover:bg-orange-600 transition-colors inline-flex items-center justify-center'
               >
                 Get Resume
-              </button>
+              </a>
             </div>
           </div>
         </div>
