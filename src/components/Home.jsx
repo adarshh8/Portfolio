@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaLinkedinIn } from "react-icons/fa6";
 import AboutMe from './AboutMe';
-
+import Resume from './Resume';
 import Contact from './Contact';
 
 function Home() {
@@ -129,7 +129,9 @@ function Home() {
         <div id="about-me" className='scroll-mt-20'>
           <AboutMe />
         </div>
-
+        <div id="resume" className='scroll-mt-20'>
+          <Resume />
+        </div>
         <div id="contact" className='scroll-mt-20'>
           <Contact />
         </div>
